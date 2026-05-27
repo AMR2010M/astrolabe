@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AMR2010M/butterfly-css@latest/butterflycss.css">
+    
+                    <script src="https://cdn.jsdelivr.net/gh/AMR2010M/butterfly-css@latest/vf.js"></script>
+</head>
+<body>
+    <div w-90p h-70  yellow center handdrawn columns id="space">
+              
+
+
+    </div>
+
+</body>
+</html>    
+<script type="module">
+  import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+
+    const supabaseUrl = 'https://nymndfucfwgjfxhawkxx.supabase.co';
+    const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im55bW5kZnVjZndnamZ4aGF3a3h4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYxMDU3NzUsImV4cCI6MjA5MTY4MTc3NX0.fuqQ5_VDW4wq3ENsqop9SJ_c3P333UKQSnZmxNZPbZk";
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get('id');
+    const supabase = createClient(supabaseUrl, supabaseKey);
+    const {data:product,error:ex}=await supabase.from('products').select('*').eq('id',id).single();
+    var space=document.getElementById('space');
+ const thisproduct=`
+  
+                <h1 center style="margin: 5px; font-size: 40px;" tbrown   p-1  > ${product.name}</h1>
+                <p  center style="margin: 5px; font-size: 20px; padding: 10px; white-space: pre-wrap;" tbrown  > ${product.d2} </p>
+<img src=" ${product.img1}"  w-80p handdrawn  h-40p style="margin-top: 0px;">
+
+<p center style="margin: 5px; font-size: 20px; padding: 10px; white-space: pre-wrap;" tbrown   >  ${product.des}</p>
+<a   href=" ${product.url}"><button btn=blue style='margin:5px'>visit</button></a>
+              `
+space.innerHTML+=thisproduct;
+
+
+</script>
