@@ -160,13 +160,14 @@ else{
                 provider: 'google',
                 options: { redirectTo: window.location.href }
             });
+            var email=user.email;
             if (error) alert('خطأ في تسجيل الدخول: ' + error.message);
             return null;
         }
         return user;
     }
      getAuthenticatedUser();
-    const {data:info,error:ex}=await supabase.from('products').select('*').eq('founder',user.email);
+    const {data:info,error:ex}=await supabase.from('products').select('*').eq('founder',email);
     for(const product of info){
         const thisproduct=`
         <a href='https://astrolabe.amrzlabs.com/show?id=${product.id}'>
