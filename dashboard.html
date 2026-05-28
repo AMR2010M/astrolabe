@@ -150,6 +150,22 @@ else{
     const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im55bW5kZnVjZndnamZ4aGF3a3h4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYxMDU3NzUsImV4cCI6MjA5MTY4MTc3NX0.fuqQ5_VDW4wq3ENsqop9SJ_c3P333UKQSnZmxNZPbZk";
 
     const supabase = createClient(supabaseUrl, supabaseKey);
+       
+    async function getAuthenticatedUser() {
+        const { data: { user } } = await supabase.auth.getUser();
+        
+        if (!user) {
+            // إذا لم يوجد مستخدم، نقوم بعملية تسجيل الدخول
+            const { error } = await supabase.auth.signInWithOAuth({
+                provider: 'google',
+                options: { redirectTo: window.location.href }
+            });
+            if (error) alert('خطأ في تسجيل الدخول: ' + error.message);
+            return null;
+        }
+        return user;
+    }
+     getAuthenticatedUser();
     const {data:info,error:ex}=await supabase.from('products').select('*').eq('founder',user.email);
     for(const product of info){
         const thisproduct=`
