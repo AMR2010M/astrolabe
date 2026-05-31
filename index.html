@@ -162,13 +162,15 @@ const month = now.getMonth() + 1;
 const day=now.getDate();
 if(fr==1){
   fr=30;
+    var mon=month-1
 }
 else{
-var fr=day-1;
+var fr=day-1
+      var mon=month;
 }
 
 
-var yesterday=`${year}/${month}/${fr}`;
+var yesterday=`${year}/${mon}/${fr}`;
 
 var  todayDate = `${year}/${month}/${day}`;
 var spae=document.getElementById('spae')
