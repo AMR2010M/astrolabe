@@ -89,7 +89,7 @@
             const { data: { publicUrl: xvUrl } } = supabase.storage.from('logo').getPublicUrl(`public/${newImageName}`);
             displayImageUrl = xvUrl;
         }
-
+var today=Date.now();
         const { error } = await supabase.from('products').insert({
             name: nameValue,
             des: descriptionValue,
@@ -99,7 +99,8 @@
             img1: displayImageUrl,
             founder: user.email ,
             upvotes:0,
-            comments_num:0
+            comments_num:0,
+            day:today
         });
 
         if (error) {
