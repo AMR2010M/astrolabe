@@ -89,7 +89,20 @@
             const { data: { publicUrl: xvUrl } } = supabase.storage.from('logo').getPublicUrl(`public/${newImageName}`);
             displayImageUrl = xvUrl;
         }
-var today=Date.now();
+const now = new Date();
+
+
+const year = now.getFullYear();
+
+
+const month = now.getMonth() + 1;
+
+const day = now.getDate();
+
+
+var  todayDate = `${year}/${month}/${day}`;
+
+
         const { error } = await supabase.from('products').insert({
             name: nameValue,
             des: descriptionValue,
@@ -100,7 +113,7 @@ var today=Date.now();
             founder: user.email ,
             upvotes:0,
             comments_num:0,
-            day:today
+            day:todayDate
         });
 
         if (error) {
