@@ -160,12 +160,17 @@ else{
                 provider: 'google',
                 options: { redirectTo: window.location.href }
             });
-            var email=user.email;
+          
             if (error) alert('خطأ في تسجيل الدخول: ' + error.message);
             return null;
         }
-        return user;
+        else{
+            return user;
+            var email=user.email;
+        }
+        
     }
+
      getAuthenticatedUser();
     const {data:info,error:ex}=await supabase.from('products').select('*').eq('founder',email);
     for(const product of info){
