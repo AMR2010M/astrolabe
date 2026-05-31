@@ -165,7 +165,7 @@ else{
             return null;
         }
         else{
-            return user;
+       
             var email=user.email;
                 const {data:info,error:ex}=await supabase.from('products').select('*').eq('founder',email);
     for(const product of info){
