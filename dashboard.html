@@ -167,12 +167,7 @@ else{
         else{
             return user;
             var email=user.email;
-        }
-        
-    }
-
-     getAuthenticatedUser();
-    const {data:info,error:ex}=await supabase.from('products').select('*').eq('founder',email);
+                const {data:info,error:ex}=await supabase.from('products').select('*').eq('founder',email);
     for(const product of info){
         const thisproduct=`
         <a href='https://astrolabe.amrzlabs.com/show?id=${product.id}'>
@@ -193,6 +188,12 @@ else{
         `
 space.innerHTML+=thisproduct;
     }
+        }
+        
+    }
+
+     getAuthenticatedUser();
+
 
 
 
