@@ -53,7 +53,7 @@ const id = urlParams.get('id');
 <a   href=" ${product.url}"><button btn=blue style='margin:5px'>الرابط</button></a>
               `
 space.innerHTML+=thisproduct;
-  const {data:commenst,error:exo}=await supabase.from('comments').select('*').eq('post',id);
+  const {data:comments,error:exo}=await supabase.from('comments').select('*').eq('post',id);
    var jojo=document.getElementById('jojo');
    for(const comment of comments){
  const como=`
