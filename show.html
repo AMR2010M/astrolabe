@@ -104,15 +104,15 @@
     `;
     space.innerHTML += thisproduct;
 
-    // جلب التعليقات
+   
     const {data:comments, error:exo} = await supabase.from('comments').select('*').eq('post', id);
     var jojo = document.getElementById('jojo');
     
     if (comments) {
         for(const comment of comments){
             const como = `
-                <div handdrawn nof style='height:20rem; padding:1rem; margin-bottom:30px;' columns w-90p>
-                    <p top tbrown tsmall center rows tbold style="font-size: 30px; margin-top: 1rem;">
+                <div b-black nof style='height:20rem; padding:1rem; margin-bottom:30px;' columns w-90p>
+                    <p top tbrown tsmall center rows tbold style="font-size: 24px; margin-top: 1rem;">
                         <img src="${comment.avatar}" style='height:4rem; width:4rem; border-radius:4rem;margin-bottom: 1rem;'> 
                         ${comment.writer}
                     </p>
