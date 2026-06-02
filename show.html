@@ -159,11 +159,17 @@ space.innerHTML+=thisproduct;
    for(const comment of comments){
  const como=`
   
-           <div p-1  w-90p min-h-20  center   tsmall m-1 white  handdrawn nof>
-<h1 tblack tsmall monospace tbold> ${comment.writer}</h1>
-<p style="font-size: 16px;" tbrown tbold></p>
-<p center style="white-space: pre-wrap; font-weight: 300;" >${comment.text}</p>
-</div>
+          <div handdrawn nof  h-20 p-1 columns style="background-color: rgba(255, 255, 0, 0.182);" w-80p>
+        <p top tbrown tsmall center rows mt-1 tbold style="font-size: 30px;">
+               <img  src="${comment.avatar}" h-4 ml-2 w-4 rad-4 > 
+
+            
+          ${comment.writer}
+         
+        </p>
+        <h1 center tsmall w-90p h-50p p-1 ol >${comment.text}</h1>
+    </div>
+
               `
 jojo.innerHTML+=como;
    }
@@ -188,7 +194,7 @@ koko.onclick= async function(){
            writer:fullName,
            upvotes:0,
         post:id,
-  
+  avator:avatarUrl
 
            
         });
