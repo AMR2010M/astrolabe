@@ -4,202 +4,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AMR2010M/butterfly-css@latest/butterflycss.css">
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AMR2010M/butterfly-css@latest/butterflycss.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
           
-          <style>
+    <style>
         @media(max-width:780px){
-[hid]{
-    display: none;
-}
-[d]{
-    width: 100%;
-}
+            [hid]{ display: none; }
+            [d]{ width: 100%; }
         }
-        
     </style>
     
     <style>
-         @media(min-width:700px){
-
-  [max]{
-            height: 100%;
-           width: 20%;
-           }
-             [flexo]{
-            display: flex;
-            flex-direction: column;
-           }
-          
-         }
-    [auto]{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-           }
-      
-        [computer='hide']{
-                display: none;
-            }
+        @media(min-width:700px){
+            [max]{ height: 100%; width: 20%; }
+            [flexo]{ display: flex; flex-direction: column; }
+        }
+        [auto]{ display: flex; flex-direction: row; justify-content: center; align-items: center; }
+        [computer='hide']{ display: none; }
 
         @media(max-width:700px){
-
-            [mobile='hide']{
-                display: none;
-            }
-             [computer='hide']{
-                display: block;
-            }
-           [cp6]{
-            height: 10rem;
-            width:10rem;
-
-           }
-           [max]{
-            max-height: 300px;
-
-           }
-           [flexo]{
-            display: flex;
-            flex-direction: row;
-           }
-           [auto]{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-           }
+            [mobile='hide']{ display: none; }
+            [computer='hide']{ display: block; }
+            [cp6]{ height: 10rem; width:10rem; }
+            [max]{ max-height: 300px; }
+            [flexo]{ display: flex; flex-direction: row; }
+            [auto]{ display: flex; flex-direction: column; justify-content: center; align-items: center; }
         }
     </style>
     <script src="https://cdn.jsdelivr.net/gh/AMR2010M/butterfly-css@latest/vf.js"></script>
 </head>
-<body columns >
+<body columns>
 
- 
-
- 
-    <div  w-70p min-h-300 style="position: absolute; left: 0px; top:0px" d>
+    <div w-70p min-h-300 style="position: absolute; left: 0px; top:0px" d>
    
-<nav  id='nav'navbar    white  center top  rad-3   nof m-1 w-80p style="box-shadow: -0px 0px 100px rgb(255, 242, 0); background: transparent; position: absolute;" center mt-2 handdrawn >
-          <button computer="hide" id='menu-btn' style="left: 1rem ;position:absolute; top:1rem "> <svg width="35"      height="35" viewBox="0 -5 32 32" xmlns="http://www.w3.org/2000/svg"><title>menu</title><defs><linearGradient x1="50%" y1="0%" x2="50%" y2="99.045%" id="a"><stop stop-color="#b4b5c6" offset="0%"/><stop stop-color="pink" offset="100%"/></linearGradient></defs><path d="M974 58a2 2 0 0 1 0 4h-28a2 2 0 0 1 0-4zm0-9a2 2 0 0 1 0 4h-28a2 2 0 0 1 0-4zm0-9a2 2 0 0 1 0 4h-28a2 2 0 0 1 0-4z" transform="translate(-944 -40)" fill="pink"/></svg></button>
+        <nav id='nav' navbar white center top rad-3 nof m-1 w-80p style="box-shadow: -0px 0px 100px rgb(255, 242, 0); background: transparent; position: absolute;" center mt-2 handdrawn>
+            <button computer="hide" id='menu-btn' style="left: 1rem ;position:absolute; top:1rem "> 
+                <svg width="35" height="35" viewBox="0 -5 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <title>menu</title>
+                    <defs>
+                        <linearGradient x1="50%" y1="0%" x2="50%" y2="99.045%" id="a">
+                            <stop stop-color="#b4b5c6" offset="0%"/><stop stop-color="pink" offset="100%"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M974 58a2 2 0 0 1 0 4h-28a2 2 0 0 1 0-4zm0-9a2 2 0 0 1 0 4h-28a2 2 0 0 1 0-4zm0-9a2 2 0 0 1 0 4h-28a2 2 0 0 1 0-4z" transform="translate(-944 -40)" fill="pink"/>
+                </svg>
+            </button>
 
+            <div flex-auto id="list" cp6 tbrown>
+                <span m-1 hover-19>سجل خروج</span>
+                <span m-1 hover-19 id="acc" style="cursor: pointer;">انضم</span>
+                <span m-1 hover-19><a href="/dashboard">حسابك</a></span>
+            </div>
+            <button style="right: 3px ;position:absolute;" dark-btn m-1 hover-1>
+                <svg width="28px" height="28px" viewBox="0 0 35 35" data-name="Layer 2" id="Layer_2" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.44,34.68a18.22,18.22,0,0,1-2.94-.24,18.18,18.18,0,0,1-15-20.86A18.06,18.06,0,0,1,9.59.63,2.42,2.42,0,0,1,12.2.79a2.39,2.39,0,0,1,1,2.41L11.9,3.1l1.23.22A15.66,15.66,0,0,0,23.34,21h0a15.82,15.82,0,0,0,8.47.53A2.44,2.44,0,0,1,34.47,25,18.18,18.18,0,0,1,18.44,34.68ZM10.67,2.89a15.67,15.67,0,0,0-5,22.77A15.66,15.66,0,0,0,32.18,24a18.49,18.49,0,0,1-9.65-.64A18.18,18.18,0,0,1,10.67,2.89Z"/>
+                </svg>
+            </button>
+        </nav>
 
-    <div flex-auto id="list" cp6 tbrown >
-         <span m-1  hover-19  >سجل خروج</span>
-        <span m-1   hover-19 id="acc" style="cursor: pointer;">انضم  </span>
-        <span m-1  hover-19><a  href="/dashboard">حسابك</a></span>
+        <div w-100p min-h-40 white columns p-3 id="space" mt-10></div>
 
-    </div>
-            <button   style="right: 3px ;position:absolute; "  dark-btn   m-1 hover-1 ><svg  width="28px" height="28px" viewBox="0 0 35 35" data-name="Layer 2" id="Layer_2" xmlns="http://www.w3.org/2000/svg"><path d="M18.44,34.68a18.22,18.22,0,0,1-2.94-.24,18.18,18.18,0,0,1-15-20.86A18.06,18.06,0,0,1,9.59.63,2.42,2.42,0,0,1,12.2.79a2.39,2.39,0,0,1,1,2.41L11.9,3.1l1.23.22A15.66,15.66,0,0,0,23.34,21h0a15.82,15.82,0,0,0,8.47.53A2.44,2.44,0,0,1,34.47,25,18.18,18.18,0,0,1,18.44,34.68ZM10.67,2.89a15.67,15.67,0,0,0-5,22.77A15.66,15.66,0,0,0,32.18,24a18.49,18.49,0,0,1-9.65-.64A18.18,18.18,0,0,1,10.67,2.89Z"/></svg></button>
-</nav>
-
-        <div w-100p min-h-40 white columns p-3 id="space" mt-10>
-
-
-
-        </div>
-
-<textarea w-90p h-18 center rad-1 placeholder="اضف مراجعة"b-gray tblack p-2  handdrawn id="lolo"></textarea>
-<button btn="brown" id="koko">اضف مراجعتك</button>
-        <div w-100p min-h-40 white columns p-3 id="jojo" >
-
-
-
-        </div>
-
-
-   
-      <div h-100p w-20 style="position: fixed; right: 0px; top:0px" yellow hid  columns handdrawn>
-     
+        <textarea w-90p h-18 center rad-1 placeholder="اضف مراجعة" b-gray tblack p-2 handdrawn id="lolo"></textarea>
+        <button btn="brown" id="koko">اضف مراجعتك</button>
         
-  <a href="create.html" w-80p h-3 white center rad-5 tyellow  rows  >اطلق منتجك اليوم 💫</a>
+        <div w-100p min-h-40 white columns p-3 id="jojo"></div>
 
-   <a twhite tbold href="https://amrzlabs.com" m-1 >created by amr kilany@amrzlabs   <p center twhite>with love and butterfly css </p></a>
- 
-   
-  
+        <div h-100p w-20 style="position: fixed; right: 0px; top:0px" yellow hid columns handdrawn>
+            <a href="create.html" w-80p h-3 white center rad-5 tyellow rows>اطلق منتجك اليوم 💫</a>
+            <a twhite tbold href="https://amrzlabs.com" m-1>created by amr kilany@amrzlabs <p center twhite>with love and butterfly css </p></a>
         </div>
- 
-
-
 
     </div>
-    
-
 
 </body>
 </html>    
+
 <script type="module">
-  import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+    import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 
     const supabaseUrl = 'https://nymndfucfwgjfxhawkxx.supabase.co';
     const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im55bW5kZnVjZndnamZ4aGF3a3h4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYxMDU3NzUsImV4cCI6MjA5MTY4MTc3NX0.fuqQ5_VDW4wq3ENsqop9SJ_c3P333UKQSnZmxNZPbZk";
-const urlParams = new URLSearchParams(window.location.search);
-const id = urlParams.get('id');
-    const supabase = createClient(supabaseUrl, supabaseKey);
-    const {data:product,error:ex}=await supabase.from('products').select('*').eq('id',id).single();
-        
     
-     var space=document.getElementById('space');
- const thisproduct=`
-  
-                <h1 center style="margin: 5px; font-size: 40px;" tbrown   p-1 rows >                 <img src=" ${product.logo}"     style="margin-top: 0px;height:5rem ;width:5rem;">${product.name}</h1>
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('id');
+    const supabase = createClient(supabaseUrl, supabaseKey);
+    
+    // جلب بيانات المنتج
+    const {data:product, error:ex} = await supabase.from('products').select('*').eq('id',id).single();
+        
+    var space = document.getElementById('space');
+    const thisproduct = `
+        <h1 center style="margin: 5px; font-size: 40px;" tbrown p-1 rows> 
+            <img src="${product.logo}" style="margin-top: 0px; height:5rem; width:5rem;">${product.name}
+        </h1>
+        <p center style="margin: 5px; font-size: 20px; padding: 10px; white-space: pre-wrap;" tbrown> ${product.d2} </p>
+        <img src="${product.img1}" w-90p style="margin-top: 0px; height:20rem">
+        <p center style="margin: 5px; font-size: 20px; padding: 10px; white-space: pre-wrap;" tbrown> ${product.des}</p>
+        <a href="${product.url}"><button btn=brown twhite style='margin:5px'>الرابط</button></a>
+    `;
+    space.innerHTML += thisproduct;
 
-                <p  center style="margin: 5px; font-size: 20px; padding: 10px; white-space: pre-wrap;" tbrown  > ${product.d2} </p>
-<img src=" ${product.img1}"  w-90p   style="margin-top: 0px;height:20rem">
+    // جلب التعليقات
+    const {data:comments, error:exo} = await supabase.from('comments').select('*').eq('post', id);
+    var jojo = document.getElementById('jojo');
+    
+    if (comments) {
+        for(const comment of comments){
+            const como = `
+                <div handdrawn nof style='height:20rem; padding:1rem; background-color: rgba(255, 255, 0, 0.182);' columns w-80p>
+                    <p top tbrown tsmall center rows tbold style="font-size: 30px; margin-bottom: 1rem;">
+                        <img src="${comment.avatar || ''}" style='height:4rem; width:4rem; border-radius:4rem;'> 
+                        ${comment.writer}
+                    </p>
+                    <h1 center tsmall w-90p h-50p ol style='padding:1rem;'>${comment.text}</h1>
+                </div>
+            `;
+            jojo.innerHTML += como;
+        }
+    }
 
-<p center   style="margin: 5px; font-size: 20px; padding: 10px; white-space: pre-wrap;" tbrown   >  ${product.des}</p>
-<a   href=" ${product.url}" ><button  btn=brown twhite style='margin:5px'>الرابط</button></a>
+    // جلب أزرار وحقول المدخلات لتجنب أخطاء التعريف
+    const koko = document.getElementById('koko');
+    const lolo = document.getElementById('lolo');
 
-              `
-space.innerHTML+=thisproduct;
-  const {data:comments,error:exo}=await supabase.from('comments').select('*').eq('post',id);
-   var jojo=document.getElementById('jojo');
-   for(const comment of comments){
- const como=`
-  
-          <div handdrawn nof  style='height:20rem; padding:1rem' columns style="background-color: rgba(255, 255, 0, 0.182);" w-80p>
-        <p top tbrown tsmall center rows styel='margin-bottom:1rem;' tbold style="font-size: 30px;">
-               <img  src="${comment.avatar}" style='height:4rem;width:4rem;border-radius:4rem;'> 
-
-            
-          ${comment.writer}
-         
-        </p>
-        <h1 center tsmall w-90p h-50p ol  style='padding:1rem;'>${comment.text}</h1>
-    </div>
-
-              `
-jojo.innerHTML+=como;
-   }
-koko.onclick= async function(){
-
-     const { data: { user } } = await supabase.auth.getUser();
-            
+    koko.onclick = async function(){
+        const { data: { user } } = await supabase.auth.getUser();
+                
         if (!user) {
-            // إذا لم يوجد مستخدم، نقوم بعملية تسجيل الدخول
             const { error } = await supabase.auth.signInWithOAuth({
                 provider: 'google',
                 options: { redirectTo: window.location.href }
             });
             if (error) alert('خطأ في تسجيل الدخول: ' + error.message);
             return null;
+        } else {
+            const fullName = user.user_metadata.full_name;
+            const avatarUrl = user.user_metadata.avatar_url;
+            
+            const { error } = await supabase.from('comments').insert({
+                text: lolo.value,
+                writer: fullName,
+                upvotes: 0,
+                post: id,
+                avatar: avatarUrl // تأكد من مطابقة اسم الحقل بجدول Supabase (avatar وليس avator)
+            });
+
+            if (error) {
+                alert('حدث خطأ أثناء إضافة التعليق');
+            } else {
+                location.reload();
+            }
         }
-        else{
-              const fullName = user.user_metadata.full_name;
-  const avatarUrl = user.user_metadata.avatar_url;
-      const { error } = await supabase.from('comments').insert({
-           text:lolo.value,
-           writer:fullName,
-           upvotes:0,
-        post:id,
-  avator:avatarUrl
-
-           
-        });
-
     }
-}
-
 </script>
