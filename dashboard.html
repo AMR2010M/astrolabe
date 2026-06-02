@@ -173,7 +173,7 @@ else{
 var namo=document.getElementById('namo');
 var mamo=document.getElementById('mamo');
 namo.innerText=fullName;
-momo.src=avatarUrl;
+mamo.src=avatarUrl;
 
                 const {data:info,error:ex}=await supabase.from('products').select('*').eq('founder',email);
     for(const product of info){
