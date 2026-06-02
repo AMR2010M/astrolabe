@@ -159,15 +159,15 @@ space.innerHTML+=thisproduct;
    for(const comment of comments){
  const como=`
   
-          <div handdrawn nof  h-20 p-1 columns style="background-color: rgba(255, 255, 0, 0.182);" w-80p>
-        <p top tbrown tsmall center rows mt-1 tbold style="font-size: 30px;">
-               <img  src="${comment.avatar}" h-4 ml-2 w-4 rad-4 > 
+          <div handdrawn nof  style='height:20rem; padding:1rem' columns style="background-color: rgba(255, 255, 0, 0.182);" w-80p>
+        <p top tbrown tsmall center rows styel='margin-bottom:1rem;' tbold style="font-size: 30px;">
+               <img  src="${comment.avatar}" style='height:4rem;width:4rem;border-radius:4rem;'> 
 
             
           ${comment.writer}
          
         </p>
-        <h1 center tsmall w-90p h-50p p-1 ol >${comment.text}</h1>
+        <h1 center tsmall w-90p h-50p ol  style='padding:1rem;'>${comment.text}</h1>
     </div>
 
               `
