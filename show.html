@@ -99,8 +99,9 @@
 
 
         </div>
-<div b-gray w-90p   center mb-2 ></div>
+
 <textarea w-90p h-18 center rad-1 placeholder="اضف مراجعة"b-gray tblack p-2  handdrawn></textarea>
+<button btn="brown" id="koko">اضف مراجعتك</button>
         <div w-100p min-h-40 white columns p-3 id="jojo" mt-10>
 
 
@@ -153,41 +154,46 @@ const id = urlParams.get('id');
 
               `
 space.innerHTML+=thisproduct;
-//   const {data:comments,error:exo}=await supabase.from('comments').select('*').eq('post',id);
-//    var jojo=document.getElementById('jojo');
-//    for(const comment of comments){
-//  const como=`
+  const {data:comments,error:exo}=await supabase.from('comments').select('*').eq('post',id);
+   var jojo=document.getElementById('jojo');
+   for(const comment of comments){
+ const como=`
   
-//            <div p-1  w-90p min-h-20  center   tsmall m-1 white  handdrawn nof>
-// <h1 tblack tsmall monospace tbold> ${comment.writer}</h1>
-// <p style="font-size: 16px;" tbrown tbold></p>
-// <p center style="white-space: pre-wrap; font-weight: 300;" >${comment.text}</p>
-// </div>
-//               `
-// jojo.innerHTML+=como;
-//    }
-// koko.onclick= async function(){
-//      const { data: { user } } = await supabase.auth.getUser();
-        
-//         if (!user) {
-//             // إذا لم يوجد مستخدم، نقوم بعملية تسجيل الدخول
-//             const { error } = await supabase.auth.signInWithOAuth({
-//                 provider: 'google',
-//                 options: { redirectTo: window.location.href }
-//             });
-//             if (error) alert('خطأ في تسجيل الدخول: ' + error.message);
-//             return null;
-//         }
-//       const { error } = await supabase.from('comments').insert({
-//            text:lolo.value,
-//            writer:user.email,
-//            upvotes:0,
-//         post:id,
+           <div p-1  w-90p min-h-20  center   tsmall m-1 white  handdrawn nof>
+<h1 tblack tsmall monospace tbold> ${comment.writer}</h1>
+<p style="font-size: 16px;" tbrown tbold></p>
+<p center style="white-space: pre-wrap; font-weight: 300;" >${comment.text}</p>
+</div>
+              `
+jojo.innerHTML+=como;
+   }
+koko.onclick= async function(){
+
+     const { data: { user } } = await supabase.auth.getUser();
+              const fullName = user.user_metadata.full_name;
+  const avatarUrl = user.user_metadata.avatar_url;
+        if (!user) {
+            // إذا لم يوجد مستخدم، نقوم بعملية تسجيل الدخول
+            const { error } = await supabase.auth.signInWithOAuth({
+                provider: 'google',
+                options: { redirectTo: window.location.href }
+            });
+            if (error) alert('خطأ في تسجيل الدخول: ' + error.message);
+            return null;
+        }
+        else{
+      const { error } = await supabase.from('comments').insert({
+           text:lolo.value,
+           writer:fullName,
+           upvotes:0,
+        post:id,
   
 
            
-//         });
-//         window.location.href=dociment.domain
-// }
+        });
+
+        window.location.href=document.domain
+    }
+}
 
 </script>
