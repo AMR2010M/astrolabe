@@ -96,7 +96,9 @@
 
         <div w-100p h-40  columns p-3 >
 
-<h1 center tbrown style="font-size: 90px;" monospace >حسابك    </h1>
+<h1 center tbrown style="font-size: 40px;" monospace id="namo">حسابك  
+    <img src="" w-5 h-5  id="mamo">
+</h1>
 
         </div>
 
@@ -165,8 +167,14 @@ else{
             return null;
         }
         else{
-       
+       const fullName = user.user_metadata.full_name;
+  const avatarUrl = user.user_metadata.avatar_url;
             var email=user.email;
+var namo=document.getElementById('namo');
+var mamo=document.getElementById('mamo');
+namo.innerText=fullName;
+momo.src=avatarUrl;
+
                 const {data:info,error:ex}=await supabase.from('products').select('*').eq('founder',email);
     for(const product of info){
         const thisproduct=`
