@@ -174,30 +174,9 @@ var  todayDate = `${year}/${month}/${day}`;
 var spae=document.getElementById('spae')
     
         console.log(yesterday)
-    const {data:info,error:ex}=await supabase.from('products').select('*').eq('day',todayDate);
-    for(const product of info){
-        const thisproduct=`
-        <a href='https://astrolabe.amrzlabs.com/show?id=${product.id}'>
-        <div  handdrawn w-80p m-2 rad-1 white   center auto nof style='margin-bottom:10px' >
-<img src="${product.logo}" w-100p h-100p   max center >
-<div w-100p h-100p columns style='padding:14px' >
-    <h1 center  tbold style="font-size: 20px;;" monospace tyellow>${product.name}</h1>
-    <p center  >${product.d2}</p>
-</div>
-<div w-100p h-100p  ml-1 flexo center style="padding: 5px; justify-content:space-around; align-items:center;" >
-    <button h-50p w-90p btn="white" b-yellow tblack hover-23 style="margin-bottom: 10px;"id='${product.id}'value='${product.upvotes}' class='btn'>${product.upvotes}⭐</button>
-     <button h-50p w-90p btn="white" b-yellow tblack hover-23>📝${product.comments_num}</button>
-</div>
-        </div>
-        
-        </a>
-        
-        `
-space.innerHTML+=thisproduct;
-    }
 
 
-const {data:ui,error:er}=await supabase.from('products').select('*').eq('day',yesterday);
+const {data:ui,error:er}=await supabase.from('products').select('*');
     for(const product of ui){
         const v=`
         <a href='https://astrolabe.amrzlabs.com/show?id=${product.id}'>
